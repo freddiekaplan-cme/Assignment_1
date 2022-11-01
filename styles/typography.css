@@ -1,0 +1,25 @@
+@font-face {
+    font-family: oxygen;
+    font-weight: 400;
+    src: url('../fonts/oxygen/oxygen-regular-webfont.woff') format('woff'),
+    url('../fonts//oxygen/oxygen-regular-webfont.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: oxygen;
+    font-weight: 700;
+    src: url('../fonts/oxygen/oxygen-bold-webfont.woff') format('woff'),
+    url('../fonts//oxygen/oxygen-bold-webfont.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'playfair display';
+    src: url('../fonts/playfairdisplay/playfairdisplay-variablefont_wght-webfont.woff') format('woff'), url('../fonts/playfairdisplay/playfairdisplay-variablefont_wght-webfont.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'playfair display';
+    font-style: italic;
+    src: url('../fonts/playfairdisplay/playfairdisplay-italic-variablefont_wght-webfont.woff') format('woff'),
+    url('../fonts/playfairdisplay/playfairdisplay-italic-variablefont_wght-webfont.woff2') format('woff2'),
+}
