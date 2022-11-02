@@ -51,9 +51,15 @@ body {
 
 
     .contact-sidebar {
+        display: flex;
         justify-content: center;
         flex-direction: column;
         min-height: 400px;
+    }
+
+    img.img-home-sidebar {
+        max-height: 60vw;
+        max-width: 60vw;
     }
 }
 
@@ -76,7 +82,7 @@ body {
 }
 
 @media screen and (min-width: 1024px) {
-    .contact-sidebar {
+    aside.contact-sidebar {
         justify-content: flex-end;
     }
 }
