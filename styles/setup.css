@@ -56,11 +56,6 @@ body {
         flex-direction: column;
         min-height: 400px;
     }
-
-    img.img-home-sidebar {
-        max-height: 60vw;
-        max-width: 60vw;
-    }
 }
 
 @media screen and (max-width: 480px) {

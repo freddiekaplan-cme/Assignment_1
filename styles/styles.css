@@ -70,10 +70,9 @@ header {
 
 .img-home-sidebar {
     border-radius: 50%;
-    max-height: 20vw;
+    height: initial;
     margin: var(--base-size) auto;
-    object-fit: cover;
-    max-width: 20vw;
+    width: 80%;
 }
 
 .sidebar-button {
