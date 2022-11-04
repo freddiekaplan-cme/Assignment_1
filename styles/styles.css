@@ -9,13 +9,17 @@ header {
 .menu {
     background-color: var(--primary-color);
     grid-area: menu;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 .menu-items-container {
     display: flex;
     justify-content: space-around;
     margin: 0 calc(var(--base-size) * 2);
-    padding-bottom: var(--base-size);
+    padding: var(--base-size) 0;
 }
 
 .menu-item {
@@ -75,13 +79,33 @@ header {
     width: 80%;
 }
 
-.sidebar-button {
+.img-about-main {
+    border-radius: 50%;
+    height: initial;
+    margin: var(--base-size) auto;
+    width: 100%;
+}
+
+.img-about-main-container {
+    display: flex;
+    gap: calc(var(--base-size) * 4);
+}
+
+.img-about-main-item {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    font-weight: 700;
+
+}
+
+.button {
     background-color: var(--primary-color);
     border: 2px solid;
     border-color: var(--text-color);
     border-radius: 8px;
     color: var(--bright-color);
     margin: calc(var(--base-size) * 2) auto;
+    min-width: 6rem;
     padding: var(--base-size);
     width: fit-content;
 }
@@ -91,7 +115,7 @@ header {
     padding: 0 var(--base-size);
 }
 
-.sidebar-button:hover {
+.button:hover {
     background-color: var(--primary-color);
     color: var(--bright-color);
     opacity: 90%;
@@ -123,11 +147,11 @@ header {
 .chevron {
     color: var(--bright-color);
     font-size: 2rem;
-    margin-top: calc(var(--base-size) * 4);
+    padding-bottom: calc(var(--base-size) * 4);
 }
 
-.chevron a:hover {
-    font-size: 2.2rem;
+.chevron:hover {
+    color: var(--primary-color);
     transition: 0.1s;
 }
 
@@ -136,7 +160,9 @@ header {
 }
 
 h1,
-h2 {
+h2,
+h3,
+h4 {
     font-family: 'Playfair Display', serif;
     font-style: italic;
 }
@@ -144,7 +170,11 @@ h2 {
 h1 {
     color: var(--accent-color);
     text-align: center;
-    margin-top: calc(var(--base-size) * 3);
+    margin: calc(var(--base-size) * 4) 0 calc(var(--base-size) * 2) 0;
+}
+
+h2 {
+    margin-bottom: 0;
 }
 
 .preamble {
@@ -168,4 +198,8 @@ a:visited {
 .current-menu-item {
     background-color: var(--accent-color);
     color: var(--primary-color);
+}
+
+.about-sidebar-item {
+    margin-bottom: 0;
 }
