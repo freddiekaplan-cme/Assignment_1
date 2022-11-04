@@ -9,8 +9,18 @@
         <title>About Us - Assignment One</title>
     </head>
     <body class="grid-container">
-        <header id="header">
-            <a href="../html/index.html"><h1>Assignment One</h1></a>
+        <header class="header">
+            <div class="desktop-menu">
+                <a href="../html/index.html"><h1>Assignment One</h1></a>
+            </div>
+            <div class="mobile-menu">  
+                <div class="mobile-bars">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <div class="mobile-h1">
+                    <h1>Assignment One</h1>
+                </div>
+            </div>
         </header>
         <nav class="menu">
             <div class="menu-items-container">
@@ -19,9 +29,9 @@
                 <a href="../html/about.html"><div class="menu-item current-menu-item">ABOUT</div></a>
             </div>
         </nav>
-    </header>
-    <main class="main">
-        <article class="main-content">
+        <div id="main-top"></div>
+        <main class="main">
+            <article class="main-content">
             <h2>About Us</h2>
             <p class="preamble">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam suscipit optio repellendus eos temporibus esse, id nemo!</p>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati nisi, iste hic fugiat ducimus quas quod officiis quam blanditiis quisquam repellendus sunt id maiores. Iure officia, minima necessitatibus, laboriosam sunt quo eligendi, eius itaque adipisci at nostrum. Ea numquam deserunt cupiditate quo temporibus saepe modi!</p>
@@ -63,7 +73,7 @@
         </article>
     </aside>
     <footer class="footer">
-        <a href="#header"><div class="chevron"><i class="fa-solid fa-chevron-up"></i></div></a>
+        <a href="#main-top"><div class="chevron"><i class="fa-solid fa-chevron-up"></i></div></a>
         <div>&copy; Freddie Kaplan 2022</div>
     </footer>
 </body>

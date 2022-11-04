@@ -33,7 +33,6 @@ body {
     border-radius: 3px;
     box-sizing: border-box;
     display: block;
-
 }
 
 label {
@@ -82,23 +81,32 @@ button.form-button {
     display: none;
 }
 
+#main-top {
+    background-color: var(--primary-color);
+    height: calc(var(--base-size) * 10);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
 @media screen and (max-width: 768px) {
     .about-sidebar-item-container {
         margin-left: calc(var(--base-size) * 2);
     }
-
+    
     article.main-content, 
     article.sidebar-content {
         padding: calc(var(--base-size) * 3) calc(var(--base-size) * 1.5);
     }
-
+    
     .contact-sidebar {
         display: flex;
         justify-content: center;
         flex-direction: column;
         min-height: 400px;
     }
-
+    
     .grid-container {
         grid-template: repeat(5, 1fr) / 1fr;
         grid-template-areas: "header" "menu" "main" "sidebar" "footer";
@@ -107,7 +115,7 @@ button.form-button {
     .footer {
         padding: calc(var(--base-size) * 4) calc(var(--base-size) * 2);
     }
-
+    
     .img-about-main-container {
         display: flex;
         flex-direction: column;
@@ -121,16 +129,20 @@ button.form-button {
         flex-direction: column;
         justify-content: center;
     }
-
+    
     div.mobile-h1 h1 {
         margin: 0;
         padding: calc(var(--base-size) * 3) 0;
     }
-
-
+    
+    
 }
 
 @media screen and (max-width: 480px) {
+    article.main-content {
+        padding-top: calc(var(--base-size) * 7);
+    }
+
     .contact-sidebar {
         justify-content: flex-end;
     }
@@ -139,16 +151,24 @@ button.form-button {
         width: 65%;
     }
     
+    div.mobile-h1 h1 {
+        padding: 0;
+        font-size: 1.75rem;
+    }
     
     h2,
     h3 {
         text-align: center;
     }
-    
+
+    #main-top {
+        height: 0;
+    }
+
     .menu {
         display: none;
     }
-
+    
     .mobile-menu {
         align-items: center;
         display: flex;
@@ -157,14 +177,15 @@ button.form-button {
     .mobile-bars {
         font-size: 2rem;
         position: absolute;
-        top: calc(var(--base-size) * 2.7);
-        left: calc(var(--base-size) * 2.7);;
+        top: calc((var(--base-size) * 2.5) - 1rem);
+        left: calc(var(--base-size) * 2.5);
     }
-
-    #header {
-        position: sticky;
+    
+    .header {
+        position: fixed;
         top: 0;
-        left: 0;
+        height: calc(var(--base-size) * 5);
+        width: 100%;
     }
 
     .desktop-menu {

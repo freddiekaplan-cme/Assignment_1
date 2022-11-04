@@ -1,18 +1,19 @@
-header {
+.header {
     background-color: var(--primary-color);
     display: flex;
     grid-area: header;
     justify-content: center;
     align-content: center;
+    z-index: 20;
 }
 
 .menu {
     background-color: var(--primary-color);
     grid-area: menu;
+    width: 100%;
+    z-index: 30;
     position: sticky;
     top: 0;
-    left: 0;
-    width: 100%;
 }
 
 .menu-items-container {
