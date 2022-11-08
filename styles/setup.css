@@ -20,7 +20,9 @@ body {
 }
 
 .grid-container {
+    -ms-grid-columns: 3fr 1fr;
     background-color: var(--bright-color);
+    display: -ms-grid;
     display: grid;
     grid-template: 0.5fr 0.5fr 5fr 1fr / 3fr 1fr;
     grid-template-areas: "header header" "menu menu" "main sidebar" "footer footer";
@@ -28,8 +30,16 @@ body {
 }
 
 .header {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    -ms-grid-row: 1;
+    -ms-flex-line-pack: center;
+    -ms-flex-pack: center;
+    -webkit-box-pack: center;
     align-content: center;
     background-color: var(--primary-color);
+    display: -ms-flexbox;
+    display: -webkit-box;
     display: flex;
     grid-area: header;
     justify-content: center;
@@ -48,6 +58,8 @@ body {
 }
 
 .mobile-bars:hover .mobile-menu-container {
+    display: -ms-flexbox;
+    display: -webkit-box;
     display: flex;
 }
 
@@ -61,6 +73,9 @@ body {
 }
 
 .mobile-menu-container {
+    -ms-flex-direction: column;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
     background-color: var(--primary-color);
     display: none;
     flex-direction: column;
@@ -82,6 +97,9 @@ body {
 }
 
 .menu {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    -ms-grid-row: 2;
     background-color: var(--primary-color);
     grid-area: menu;
     position: sticky;
@@ -91,6 +109,9 @@ body {
 }
 
 .menu-items-container {
+    -ms-flex-pack: distribute;
+    display: -ms-flexbox;
+    display: -webkit-box;
     display: flex;
     justify-content: space-around;
     margin: 0 calc(var(--base-size) * 2);
@@ -98,8 +119,14 @@ body {
 }
 
 .menu-item {
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
     align-items: center;
     border-radius: 25px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     justify-content: center;
     padding: calc(var(--base-size) * 0.75);
@@ -107,6 +134,7 @@ body {
 }
 
 .menu-item:hover  {
+    -webkit-transition: opacity 0.3s;
     background-color: var(--accent-color);
     color: var(--primary-color);
     opacity: 80%;
@@ -128,6 +156,14 @@ body {
 }
 
 .main {
+    -ms-flex-direction: column;
+    -ms-grid-column: 1;
+    -ms-grid-column-align: center;
+    -ms-grid-row: 3;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    display: -ms-flexbox;
+    display: -webkit-box;
     display: flex;
     grid-area: main;
     justify-self: center;
@@ -135,7 +171,12 @@ body {
 }
 
 .main-content {
+    -ms-flex-direction: column;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
     color: var(--text-color);
+    display: -ms-flexbox;
+    display: -webkit-box;
     display: flex;
     flex-direction: column;
     margin-top: 0;
@@ -144,14 +185,26 @@ body {
 }
 
 .sidebar {
+    -ms-flex-direction: column;
+    -ms-grid-column: 2;
+    -ms-grid-row: 3;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     background-color: var(--accent-color);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     flex-direction: column;
     grid-area: sidebar;
 }
 
 .sidebar-content {
+    -ms-flex-direction: column;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
     color: var(--text-color);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
@@ -172,6 +225,8 @@ body {
     margin: calc(var(--base-size) * 2) auto;
     min-width: 6rem;
     padding: var(--base-size);
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
 }
 
@@ -182,8 +237,16 @@ body {
 }
 
 .footer {
+    -ms-grid-column: 1;
+    -ms-grid-row: 4;
+    -ms-grid-column-span: 2;
+    -ms-flex-direction: column;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
     background-color: var(--dark-color);
     color: var(--bright-color);
+    display: -ms-flexbox;
+    display: -webkit-box;
     display: flex;
     flex-direction: column;
     font-family: 'Playfair Display', serif;
@@ -201,6 +264,7 @@ body {
 
 .chevron:hover {
     color: var(--primary-color);
+    -webkit-transition: 0.1s;
     transition: 0.1s;
 }
 
