@@ -1,19 +1,20 @@
 .header {
+    align-content: center;
     background-color: var(--primary-color);
     display: flex;
     grid-area: header;
     justify-content: center;
-    align-content: center;
+    position: relative;
     z-index: 20;
 }
 
 .menu {
     background-color: var(--primary-color);
     grid-area: menu;
-    width: 100%;
-    z-index: 30;
     position: sticky;
     top: 0;
+    width: 100%;
+    z-index: 30;
 }
 
 .menu-items-container {
@@ -127,10 +128,14 @@
 }
 
 .contact-sidebar {
-    display: flex;
+    background-image: url(
+        ../img/sidebar-img-tim-mossholder-unsplash.webp
+        );
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     grid-area: sidebar;
     overflow: hidden;
-    justify-content: center;
 }
 
 .footer {
@@ -203,4 +208,29 @@ a:visited {
 
 .about-sidebar-item {
     margin-bottom: 0;
+}
+
+.mobile-menu-container {
+    background-color: var(--primary-color);
+    display: none;
+    flex-direction: column;
+    left: 0;
+    min-width: 100vw;
+    overflow: hidden;
+    padding-top: calc(var(--base-size) * 2);
+    position: fixed;
+    top: calc(var(--base-size) * 5);
+    z-index: 10;
+}
+
+.mobile-menu-container .menu-item {
+    border-radius: 0;
+    margin: 0 auto;
+    min-width: 100%;
+    overflow: hidden;
+    padding: calc(var(--base-size) * 3) 0;
+}
+
+.mobile-bars:hover .mobile-menu-container {
+    display: flex;
 }

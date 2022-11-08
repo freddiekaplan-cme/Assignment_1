@@ -16,6 +16,11 @@
             <div class="mobile-menu">  
                 <div class="mobile-bars">
                     <i class="fa-solid fa-bars"></i>
+                    <div class="mobile-menu-container">
+                        <a href="../html/index.html"><div class="menu-item current-menu-item">HOME</div></a>
+                        <a href="../html/contact.html"><div class="menu-item">CONTACT</div></a>
+                        <a href="../html/about.html"><div class="menu-item">ABOUT</div></a>
+                    </div>
                 </div>
                 <div class="mobile-h1">
                     <h1>Assignment One</h1>
@@ -38,13 +43,13 @@
             <h3>What's on your mind?</h3>
                 <form id="contact-form" action="mailto:freddie.kaplan@edu.cmeducations.se" method="get">
                     <label for="name">Full Name</label>
-                    <input id="name" type="text" placeholder="Name Lastname">
+                    <input id="name" type="text" placeholder="Name Lastname" required>
                     <label for="email">Email</label>
-                    <input id="email" type="email" placeholder="name.lastname@awesome.com">
+                    <input id="email" type="email" placeholder="name.lastname@awesome.com"  required>
                     <label for="subject">Subject</label>
-                    <input id="subject" type="text" placeholder="I want to talk to you about ...">
+                    <input id="subject" type="text" placeholder="I want to talk to you about ..."  required>
                     <label for="message">Message</label>
-                    <textarea id="message" type="text" placeholder="Hi!"></textarea>
+                    <textarea id="message" type="text" placeholder="Hi!" required></textarea>
                     <button type="submit" form="contact-form" value="Submit" class="button form-button">Send</button>
                 </form>
             </div>
@@ -52,9 +57,7 @@
             </p>
         </article>    
     </main>
-    <aside class="contact-sidebar">
-        <img class="sidebar-img" alt="Image by Tim Mossholder via Unsplash" src="../img/sidebar-img-tim-mossholder-unsplash.webp">
-    </aside>
+    <aside class="contact-sidebar"></aside>
     <footer class="footer">
         <a href="#main-top"><div class="chevron"><i class="fa-solid fa-chevron-up"></i></div></a>
         <div>&copy; Freddie Kaplan 2022</div>
